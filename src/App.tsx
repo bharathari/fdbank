@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import {Box, Sheet} from '@mui/joy';
+import * as React from 'react';
+import AccReg from './component/AccReg';
+import personalBan from './component/personalBan';
+import { BrowserRouter as Router, Routes, Route, Outlet, BrowserRouter } from 'react-router-dom';
+import SimpleSheet from './component/personalBan';
+import LogPag from './component/LogPag';
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+    
+    <Routes>
+      <Route path="/" element={<AccReg/>}/>
+      <Route path="/login" element={<SimpleSheet/>}/>
+      <Route path="/loginPage" element={<LogPag/>}/>
+    </Routes>
+    </BrowserRouter>
+    </>
   );
 }
-
-export default App;
