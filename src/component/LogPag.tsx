@@ -6,6 +6,7 @@ import image2 from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/compone
 import image3 from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/pbank.png";
 import image4 from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/icons.png";
 import { Box, Button, Typography } from "@mui/joy";
+import { Link } from "react-router-dom";
 export default function LogPag() {
   return (
     <>
@@ -17,6 +18,7 @@ export default function LogPag() {
           justifyContent: "space-between",
           alignItems: "center",
           backgroundColor: "#004e96",
+          borderBottom:'3px solid #fca61b'
         }}
       >
         {/* Left Image */}
@@ -102,7 +104,7 @@ export default function LogPag() {
             width: "70vw",
             ml: "15em",
             mt: "1em",}}>
-          <Button sx={{backgroundColor:'#004e96',ml:'1em'}}>Continue to Login</Button>
+          <Link to={'/Afterlog'}><Button sx={{backgroundColor:'#004e96',ml:'1em'}}>Continue to Login</Button></Link>
           <Button sx={{backgroundColor:'#004e96'}}>Back</Button>
         </Box>
         <Box sx={{
@@ -110,7 +112,6 @@ export default function LogPag() {
                    width: "70vw",
                    ml: "15em",
                    mt: "1em",
-
                    backgroundImage:`url(${image4})`,
                    backgroundSize: "contain",
                    backgroundRepeat:'no-repeat'}}>
