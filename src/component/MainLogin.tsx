@@ -15,7 +15,7 @@ export default function MainLogin() {
           justifyContent: "space-between",
           alignItems: "start",
           backgroundImage: `url(${BgImg})`,
-          backgroundSize: "contain",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           display: "flex",
           flexDirection: "row-reverse",
