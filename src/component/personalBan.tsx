@@ -164,7 +164,7 @@ export default function SimpleSheet() {
               mt: "1em",
             }}
           >
-            <Link to={"/Afterlog"}>
+            <Link to={"/MainLogin"}>
               <Button sx={{ backgroundColor: "#004e96", ml: "1em" }}>
                 Continue to Login
               </Button>
