@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Routes, Route, Outlet, BrowserRouter } from 'r
 import SimpleSheet from './component/personalBan';
 import AfterLogPag from './component/afterlog';
 import MainLogin from './component/MainLogin';
+import LoginOne from './component/LoginOne';
+import LoginTwo from './component/LoginTwo';
+
 export default function App() {
   return (
     <>
@@ -15,7 +18,11 @@ export default function App() {
       <Route path="/" element={<AccReg/>}/>
       <Route path="/login" element={<SimpleSheet/>}/>
       <Route path="/MainLogin" element={<MainLogin/>}/>
-      <Route path="/AfterLog" element={<AfterLogPag/>}/>
+      <Route path="/Afterlogin" element={<AfterLogPag/>}>
+      <Route path='' element={<LoginOne/>}/>
+      <Route path='LoginTwo' element={<LoginTwo/>}/>
+      </Route>
+
     </Routes>
     </BrowserRouter>
     </>

@@ -4,8 +4,13 @@ import BgImg from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/componen
 import captcha from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/captcha.png";
 import { Box, Button, Input, Typography } from "@mui/joy";
 import KeyboardAltOutlinedIcon from "@mui/icons-material/KeyboardAltOutlined";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState, } from "react";
+
 export default function MainLogin() {
+  // State variable to store the username
+  const [username, setUsername] = useState("");
+  const navigate = useNavigate();
   return (
     <>
       <Sheet
@@ -45,6 +50,7 @@ export default function MainLogin() {
             <Input
               placeholder="   User ID"
               size="sm"
+              required
               sx={{
                 width: "90%",
                 alignSelf: "center",
@@ -52,6 +58,9 @@ export default function MainLogin() {
                 ml: "1em",
                 mt: "1em",
               }}
+              // Store the entered value in the username state
+              onChange={(e) => setUsername(e.target.value)}
+              value={username}
             />
             <Input
               placeholder="   Password"
@@ -65,7 +74,7 @@ export default function MainLogin() {
                 mt: "1em",
               }}
             />
-            <Box sx={{ display: "flex", justifyContent: "space-between",alignItems:'center' }}>
+            <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: 'center' }}>
               <Input
                 placeholder="   Verification code"
                 size="sm"
@@ -87,16 +96,43 @@ export default function MainLogin() {
                 }}
               ></Box>
             </Box>
-            <Link to="Afterlogin"><Button sx={{width:'90%',m:'1em',backgroundColor:'#004e96',borderRadius:'1px',height:'80%'}}>Log In</Button></Link>
-            <Box sx={{display:'flex',flexDirection:'row',m:'0.5em',justifyContent:'space-between'}}>
-              <Typography  sx={{color:'#004e96',fontSize: "0.8em" }}>Forgot Password?</Typography>
+
+              <Button
+              onClick={()=>{
+                navigate("/Afterlogin",{state:{username}})
+              }}
+                sx={{
+                  width: '90%',
+                  m: '1em',
+                  backgroundColor: '#004e96',
+                  borderRadius: '1px',
+                  height: '80%',
+                }}
+              >
+                Log In
+              </Button>
+
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                m: '0.5em',
+                justifyContent: 'space-between',
+              }}
+            >
+              <Typography sx={{ color: '#004e96', fontSize: "0.8em" }}>
+                Forgot Password?
+              </Typography>
               <Box>
-              <Typography  sx={{color:'#004e96',fontSize: "0.8em" }}>Forgot User ID?</Typography>
-              <Typography  sx={{color:'#004e96',fontSize: "0.8em" }}>Unlock User ID?</Typography>
+                <Typography sx={{ color: '#004e96', fontSize: "0.8em" }}>
+                  Forgot User ID?
+                </Typography>
+                <Typography sx={{ color: '#004e96', fontSize: "0.8em" }}>
+                  Unlock User ID?
+                </Typography>
               </Box>
             </Box>
           </Box>
-
         </Box>
       </Sheet>
     </>

@@ -24,7 +24,7 @@ export default function SimpleSheet() {
       <Sheet
         sx={{
           width: "100%",
-          height: "5em",
+          height: "10vh",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -62,7 +62,7 @@ export default function SimpleSheet() {
       <Sheet
         sx={{
           width: "100%",
-          height: "39.5em",
+          height: "90vh",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "flex-start",
@@ -107,7 +107,7 @@ export default function SimpleSheet() {
         <Sheet
           sx={{
             width: "100%",
-            height: "39.5em",
+            height: "90vh",
             position: "fixed",
             bottom: 0,
             left: 0,
