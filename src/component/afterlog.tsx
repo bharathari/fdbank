@@ -34,6 +34,7 @@ export default function AfterLogPag() {
     } else if (Accname === "sahil") {
       setUsername("Sahil Ahamed");
     }
+    else setUsername(Accname);
   };
 
   // Assuming the username will be provided via some external prop or state
@@ -41,7 +42,7 @@ export default function AfterLogPag() {
     updateUsername(Accname);
     console.log(Accname);
     
-  },[Accname]); 
+  },); 
   const AccInfo = [
     "Operative Accounts",
     "Deposit Accounts",
@@ -51,9 +52,8 @@ export default function AfterLogPag() {
   ];
   const handleClick = (index: number) => {
     if (index == 0) {
-      navigate("./LoginTwo")
+      navigate("./LoginTwo",{state:{username}})
       console.log("bh");
-      
     }
   };
   return (
@@ -216,6 +216,7 @@ export default function AfterLogPag() {
               size="lg"
               variant="plain"
               sx={{ color: "black", padding: "0px", mt: "0.7em", mr: "4em" }}
+              onClick={()=>{navigate('/Afterlogin',{state:{username}})}}
             >
               HOME
             </Button>
