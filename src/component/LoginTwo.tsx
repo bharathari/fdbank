@@ -1,12 +1,14 @@
 import Sheet from "@mui/joy/Sheet";
 import * as React from "react";
 import { Box, Breadcrumbs, Button, Input, Radio, Table, Typography } from "@mui/joy";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import StickyNote2Icon from "@mui/icons-material/StickyNote2";
 import StickyNote2OutlinedIcon from "@mui/icons-material/StickyNote2Outlined";
 import FormatAlignLeftOutlinedIcon from "@mui/icons-material/FormatAlignLeftOutlined";
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 export default function LoginTwo() {
+  const location =useLocation();
+  const username=location.state.username;
   return (
     <>
      <Box sx={{ height: "5vh" }}>
@@ -180,7 +182,7 @@ export default function LoginTwo() {
                 <tbody>
                 <tr>
                 <td><Radio value="small" label="99980116907580" size="sm" /></td>
-                <td>Ahammed sahil sahil </td>
+                <td>{username}</td>
                 <td>SB FEDBOOK SELFIE</td>
                 <td>Visakhapatnam</td>
                 <td>INR</td>
