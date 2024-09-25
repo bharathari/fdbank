@@ -1,8 +1,8 @@
 import Sheet from "@mui/joy/Sheet";
-import * as React from "react";
-import logo from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/fedrel-bank.png";
+
+import logo from "../images/fedrel-bank.png";
 import PhoneEnabledOutlinedIcon from "@mui/icons-material/PhoneEnabledOutlined";
-import { Box, Button, Input,AccordionGroup,Accordion,AccordionDetails,AccordionSummary,accordionSummaryClasses, Typography} from "@mui/joy";
+import { Box, Button, Input,AccordionGroup,Accordion,AccordionDetails,AccordionSummary,accordionSummaryClasses, Typography, Stack} from "@mui/joy";
 import RefreshOutlinedIcon from "@mui/icons-material/RefreshOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import MarkEmailUnreadOutlinedIcon from "@mui/icons-material/MarkEmailUnreadOutlined";
@@ -20,14 +20,15 @@ import CreditCardOutlinedIcon from "@mui/icons-material/CreditCardOutlined";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AddIcon from "@mui/icons-material/Add";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import {  Outlet, useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function AfterLogPag() {
-  const [acc, setAcc] = React.useState(false);
+  const [acc, setAcc] = useState(false);
   const navigate =useNavigate();
   const value=useLocation();
   const Accname=value.state.username;
-  const [username, setUsername] = React.useState("");
+  const [username, setUsername] = useState("");
   const updateUsername = (Accname: string) => {
     if (Accname === "bharat") {
       setUsername("Hari bharat");
@@ -38,10 +39,8 @@ export default function AfterLogPag() {
   };
 
   // Assuming the username will be provided via some external prop or state
-  React.useEffect(() => { // You can replace this with value.state.username if coming from props
+useEffect(() => { // You can replace this with value.state.username if coming from props
     updateUsername(Accname);
-    console.log(Accname);
-    
   },); 
   const AccInfo = [
     "Operative Accounts",
@@ -51,9 +50,9 @@ export default function AfterLogPag() {
     "IBU GIFT City Accounts",
   ];
   const handleClick = (index: number) => {
-    if (index == 0) {
+    if (index === 0) {
       navigate("./LoginTwo",{state:{username}})
-      console.log("bh");
+     
     }
   };
   return (
@@ -81,7 +80,7 @@ export default function AfterLogPag() {
           }}
         ></Box>
         <Box
-          sx={{ display: "flex",gap:4, justifyContent: "space-evenly", width: "50%" ,alignItems:'center'}}
+          sx={{ display: "flex",gap:4, justifyContent: "space-evenly", width: "50%",alignItems:'center'}}
         >
           <PhoneEnabledOutlinedIcon fontSize="large" sx={{ color: "white" }} />
           <RefreshOutlinedIcon fontSize="large" sx={{ color: "white" }} />
@@ -135,22 +134,23 @@ export default function AfterLogPag() {
               >
                 <Accordion>
                   <AccordionSummary
-                    sx={{ backgroundColor: "#004e96" }}
+                    sx={{ backgroundColor: "#004e96",color:'white' }}
                     indicator={<AddIcon />}
                   >
-                    Account Info
+                   <Typography textColor={'#fff'}> Account Info</Typography>
                   </AccordionSummary>
 
                   <AccordionDetails>
                     {AccInfo.map((item, index) => (
-                      <Button
+                      <Stack
                         key={index}
                         onClick={() => handleClick(index)}
-                        variant="plain"
-                        sx={{ color: "black" }}
+                        sx={{ color: "black",mt:1,cursor:'pointer'}}
+                        
+                        
                       >
                         {item}
-                      </Button>
+                      </Stack>
                     ))}
                   </AccordionDetails>
                 </Accordion>
@@ -159,7 +159,7 @@ export default function AfterLogPag() {
                     sx={{ backgroundColor: "#004e96" }}
                     indicator={<AddIcon />}
                   >
-                    Services
+                   <Typography textColor={'#fff'}> Services</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -169,10 +169,10 @@ export default function AfterLogPag() {
                 </Accordion>
                 <Accordion>
                   <AccordionSummary
-                    sx={{ backgroundColor: "#004e96" }}
+                    sx={{ backgroundColor: "#004e96",'&:hover':{color:'black'} }}
                     indicator={<AddIcon />}
                   >
-                    Demat Account Services
+                    <Typography textColor={'#fff'}>Demat Account Services</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -209,95 +209,96 @@ export default function AfterLogPag() {
               flexDirection: "row",
               alignContent: "flex-start",
               flexWrap: "wrap",
+              gap:'18px'
             }}
           >
             <Button
               startDecorator={<HomeOutlinedIcon />}
-              size="lg"
+              size="md"
               variant="plain"
-              sx={{ color: "black", padding: "0px", mt: "0.7em", mr: "4em" }}
+              sx={{ color: "black", padding: "0px", mr: "4em" }}
               onClick={()=>{navigate('/Afterlogin',{state:{username}})}}
             >
               HOME
             </Button>
             <Button
               startDecorator={<StyleOutlinedIcon />}
-              size="lg"
+              size="md"
               variant="plain"
-              sx={{ color: "black", padding: "0px", mt: "0.7em", mr: "4em" }}
+              sx={{ color: "black", padding: "0px", mr: "4em" }}
             >
               CREDIT CARDS
             </Button>
             <Button
               onMouseEnter={() => setAcc(true)}
               startDecorator={<ContactMailOutlinedIcon />}
-              size="lg"
+              size="md"
               variant="plain"
-              sx={{ color: "black", pr: "5em", pl: "0px", mt: "0.7em" }}
+              sx={{ color: "black", pr: "5em", pl: "0px",  }}
             >
               ACCOUNTS
             </Button>
             <Button
               startDecorator={<CurrencyExchangeOutlinedIcon />}
-              size="lg"
+              size="md"
               variant="plain"
-              sx={{ color: "black", padding: "0px", mt: "0.7em" }}
+              sx={{ color: "black", padding: "0px",  }}
             >
               TRANSFER FUNDS
             </Button>
             <Button
               startDecorator={<PersonAddAltOutlinedIcon />}
-              size="lg"
+              size="md"
               variant="plain"
-              sx={{ color: "black", padding: "0px", mt: "0.7em" }}
+              sx={{ color: "black", padding: "0px",  }}
             >
               BENEFICIARIES
             </Button>
             <Button
               startDecorator={<BuildOutlinedIcon />}
-              size="lg"
+              size="md"
               variant="plain"
-              sx={{ color: "black", padding: "0px", mt: "0.7em" }}
+              sx={{ color: "black", padding: "0px",  }}
             >
               ADD-ON SERVICES
             </Button>
             <Button
               startDecorator={<RequestQuoteOutlinedIcon />}
-              size="lg"
+              size="md"
               variant="plain"
-              sx={{ color: "black", padding: "0px", mt: "0.7em" }}
+              sx={{ color: "black", padding: "0px",  }}
             >
-              BILL PAYMENTS
+              BILL PAYMENTS     
             </Button>
             <Button
               startDecorator={<ReceiptLongOutlinedIcon />}
-              size="lg"
+              size="md"
               variant="plain"
-              sx={{ color: "black", padding: "0px", mt: "0.7em" }}
+              sx={{ color: "black", padding: "0px",  }}
             >
               MANAGE TAX
             </Button>
             <Button
               startDecorator={<SupportAgentOutlinedIcon />}
-              size="lg"
+              size="md"
               variant="plain"
-              sx={{ color: "black", padding: "0px", mt: "0.7em" }}
+              sx={{ color: "black", padding: "0px",  }}
             >
               CUSTOMER SERVICE
             </Button>
             <Button
               startDecorator={<AccountCircleOutlinedIcon />}
-              size="lg"
+              size="md"
               variant="plain"
-              sx={{ color: "black", padding: "0px", mt: "0.7em" }}
+              sx={{ color: "black", padding: "0px",  }}
             >
               MY PROFILE
             </Button>
             <Button
               startDecorator={<CreditCardOutlinedIcon />}
-              size="lg"
+              size="md"
               variant="plain"
-              sx={{ color: "black", padding: "0px", mt: "0.7em" }}
+              sx={{ color: "black", padding: "0px",  }}
             >
               DEBIT CARD SERVICES
             </Button>

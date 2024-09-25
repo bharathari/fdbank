@@ -1,16 +1,27 @@
 import Sheet from "@mui/joy/Sheet";
 import * as React from "react";
-import { Box, Breadcrumbs, Button, Input, Radio, Table, Typography } from "@mui/joy";
-import { Link, useLocation } from "react-router-dom";
+import { Box, Breadcrumbs, Button,  Radio, Stack, Table, Typography } from "@mui/joy";
+import {  useLocation } from "react-router-dom";
 import StickyNote2Icon from "@mui/icons-material/StickyNote2";
 import StickyNote2OutlinedIcon from "@mui/icons-material/StickyNote2Outlined";
 import FormatAlignLeftOutlinedIcon from "@mui/icons-material/FormatAlignLeftOutlined";
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
+
+
+// const pdfFile = '../pdf/sahil.pdf'
 export default function LoginTwo() {
   const location =useLocation();
   const username=location.state.username;
+
+    const handleDownloadPDF = () => {
+    const link = document.createElement("a");
+    link.href = `${process.env.PUBLIC_URL}/pdf/sahil.pdf`; // Using the imported file
+    link.download = "Account Statement1088XXXXXX9600..pdf"; // Name of the downloaded file
+    link.click();
+  };
+
   return (
-    <>
+    <Stack>
      <Box sx={{ height: "5vh" }}>
             {/* this is for the scrollable object
 
@@ -78,6 +89,7 @@ export default function LoginTwo() {
                   pr: 4,
                 }}
                 variant="outlined"
+                onClick={handleDownloadPDF}
               >
                 <StickyNote2OutlinedIcon />
                 Statement Of Accounts
@@ -194,6 +206,6 @@ export default function LoginTwo() {
           </Box>
         
 
-    </>
+    </Stack>
   );
 }

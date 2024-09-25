@@ -1,10 +1,10 @@
 import Sheet from "@mui/joy/Sheet";
 import * as React from "react";
-import BgImg from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/LoginBg.jpeg";
-import captcha from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/captcha.png";
+import BgImg from "../images/LoginBg.jpeg";
+import captcha from "../images/captcha.png";
 import { Box, Button, Input, Typography } from "@mui/joy";
 import KeyboardAltOutlinedIcon from "@mui/icons-material/KeyboardAltOutlined";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { useState, } from "react";
 
 export default function MainLogin() {
@@ -66,6 +66,7 @@ export default function MainLogin() {
               placeholder="   Password"
               endDecorator={<KeyboardAltOutlinedIcon />}
               size="sm"
+              type="password"
               sx={{
                 width: "90%",
                 alignSelf: "center",

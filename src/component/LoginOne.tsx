@@ -1,8 +1,6 @@
-import Sheet from "@mui/joy/Sheet";
-import * as React from "react";
-import { Accordion, AccordionDetails, AccordionGroup, AccordionSummary, accordionSummaryClasses, Box, Breadcrumbs, Button, Input, Radio, Table, Typography } from "@mui/joy";
-import { Link, useLocation } from "react-router-dom";
-import img1 from '/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/AfterLogin.png';
+import { Accordion, AccordionDetails, AccordionGroup, AccordionSummary, accordionSummaryClasses, Box, Table, Typography } from "@mui/joy";
+import { useLocation } from "react-router-dom";
+import img1 from '../images/AfterLogin.png';
 import LockIcon from '@mui/icons-material/Lock';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';

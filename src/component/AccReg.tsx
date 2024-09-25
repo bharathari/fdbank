@@ -15,11 +15,11 @@ import {
 import * as React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
-import logo from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/logo.png";
-import phone from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/mobile-icon.png";
-import phone_no from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/phone-no.png";
+import logo from "../images/logo.png";
+import phone from "../images/mobile-icon.png";
+import phone_no from "../images/phone-no.png";
 import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
-import image from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/Savings-Account.webp";
+import image from "../images/Savings-Account.webp";
 function AccReg() {
   const [showOptions, setShowOptions] = React.useState(false);
 

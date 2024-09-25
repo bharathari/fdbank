@@ -1,10 +1,11 @@
 import Sheet from "@mui/joy/Sheet";
 import * as React from "react";
-import logo from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/fedrel-bank.png";
-import image1 from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/Fednet_Logo_new.jpg";
-import image2 from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/main_image-1B.jpg";
-import image3 from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/pbank.png";
-import image4 from "/Users/bharathari/Downloads/Srinivas anna/fdbank/src/component/icons.png";
+import logo from "../images/fedrel-bank.png";
+import image1 from "../images/Fednet_Logo_new.jpg";
+import image2 from "../images/main_image-1B.jpg";
+import image3 from "../images/pbank.png";
+import image4 from "../images/icons.png";
+import image5 from '../images/PersonalNoText.jpg'
 import { Box, Typography } from "@mui/joy";
 import Button from "@mui/joy/Button";
 import ButtonGroup from "@mui/joy/ButtonGroup";
@@ -138,7 +139,7 @@ export default function SimpleSheet() {
           >
             <Box
               sx={{
-                backgroundImage: `url(${image2})`,
+                backgroundImage: `url(${image5})`,
                 backgroundSize: "cover",
                 height: "100%",
                 width: "35%",
