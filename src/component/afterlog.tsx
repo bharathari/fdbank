@@ -99,7 +99,8 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
       <Sheet
         sx={{
           width: "99.2vw",
-          height: "100vh",
+          height: "100%",
+          minHeight:"100vh",
           border: "5px solid #fca61b",
           display: "flex",
           flexDirection: "row",

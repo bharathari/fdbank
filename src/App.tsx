@@ -8,6 +8,8 @@ import AfterLogPag from './component/afterlog';
 import MainLogin from './component/MainLogin';
 import LoginOne from './component/LoginOne';
 import LoginTwo from './component/LoginTwo';
+import Statement from './component/Statement';
+import TableSortAndSelection from './component/table';
 
 export default function App() {
   return (
@@ -21,6 +23,7 @@ export default function App() {
       <Route path="/Afterlogin" element={<AfterLogPag/>}>
       <Route path='' element={<LoginOne/>}/>
       <Route path='LoginTwo' element={<LoginTwo/>}/>
+      <Route path='Statement' element={<Statement/>}/>
       </Route>
 
     </Routes>
