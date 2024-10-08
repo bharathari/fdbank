@@ -9,8 +9,6 @@ import MainLogin from './component/MainLogin';
 import LoginOne from './component/LoginOne';
 import LoginTwo from './component/LoginTwo';
 import Statement from './component/Statement';
-import TableSortAndSelection from './component/table';
-
 export default function App() {
   return (
     <>
