@@ -15,32 +15,32 @@ export default function LoginOne() {
         sx={{backgroundImage:`url(${img1})`, height:'100vh',width:'25vw',backgroundRepeat:'no-repeat',backgroundSize:'contain'}}></Box>
         <Box height={'80vh'} width={'23vw'} marginTop={'0.5em'}>
           <Box sx={{height:'20%',width:'100%',backgroundColor:'green',display:'flex',flexDirection:'column-reverse',alignItems:'flex-end',justifyContent:'center'}}>
-          <Typography sx={{color:"whitesmoke",fontSize:'1.3em',pr:'0.5em'}}>$ 22,924.91</Typography>
-          <Typography sx={{color:"whitesmoke",fontSize:'1.3em',pr:'0.5em'}}>Account Balance</Typography>
+          <Typography sx={{color:"whitesmoke",fontSize:'1.1em',pr:'0.5em'}}>$ 22,924.91</Typography>
+          <Typography sx={{color:"whitesmoke",fontSize:'1em',pr:'0.5em'}}>Account Balance</Typography>
           </Box>
           <Box height={'60%'} width={'90%'} padding={'0.85em'} marginTop={'0.5em'} sx={{backgroundColor:'#87ceeba1'}}>
             <Box >
-              <Box sx={{backgroundColor:'#004e96',minheight:'30%',width:'100%',padding:'1em 0em 1em 0em',display:'flex',flexDirection:'row'}}> <LockIcon sx={{color:'white'}}/><Typography sx={{ color:'white',ml:'0.5em'}}>   Login Password Last Changed On</Typography></Box>
-              <Box sx={{backgroundColor:'white',minheight:'30%',width:'100%',padding:'1em 0em 1em 0em',borderBottomRightRadius:'20px',borderBottomLeftRadius:'20px',display:'flex',justifyContent:'center'}}><Typography sx={{fontWeight:"700",alignSelf:'center'}}>30/08/2024</Typography></Box>
+              <Box sx={{backgroundColor:'#004e96',minheight:'30%',width:'100%',padding:'1em 0em 1em 0em',display:'flex',flexDirection:'row',alignItems:'center'}}> <LockIcon  sx={{color:'white',fontSize:18}}/><Typography sx={{ color:'white',ml:'0.5em'}} level="body-sm">   Login Password Last Changed On</Typography></Box>
+              <Box sx={{backgroundColor:'white',minheight:'30%',width:'100%',padding:'1em 0em 1em 0em',borderBottomRightRadius:'20px',borderBottomLeftRadius:'20px',display:'flex',justifyContent:'center'}}><Typography sx={{fontWeight:"600",alignSelf:'center'}} level="body-xs">30/08/2024</Typography></Box>
             </Box>
             <Box marginTop={2}>
-              <Box sx={{backgroundColor:'#004e96',minheight:'30%',width:'100%',padding:'1em 0em 1em 0em',display:'flex',flexDirection:'row'}}> <LockIcon sx={{color:'white'}}/><Typography sx={{ color:'white',ml:'0.5em'}}>   Transaction Password Last Changed </Typography></Box>
-              <Box sx={{backgroundColor:'white',minheight:'30%',width:'100%',padding:'1em 0em 1em 0em',borderBottomRightRadius:'20px',borderBottomLeftRadius:'20px',display:'flex',justifyContent:'center'}}><Typography sx={{fontWeight:"700",alignSelf:'center'}}>30/08/2024</Typography></Box>
+              <Box sx={{backgroundColor:'#004e96',minheight:'30%',width:'100%',padding:'1em 0em 1em 0em',display:'flex',flexDirection:'row',alignItems:'center'}}> <LockIcon sx={{color:'white',fontSize:18}}/><Typography sx={{ color:'white',ml:'0.5em'}} level="body-sm">   Transaction Password Last Changed </Typography></Box>
+              <Box sx={{backgroundColor:'white',minheight:'30%',width:'100%',padding:'1em 0em 1em 0em',borderBottomRightRadius:'20px',borderBottomLeftRadius:'20px',display:'flex',justifyContent:'center'}}><Typography sx={{fontWeight:"600",alignSelf:'center'}} level="body-xs">30/08/2024</Typography></Box>
             </Box>
             <Box marginTop={2}>
-              <Box sx={{minheight:'30%',width:'100%',padding:'1em 0em 1em 0em',display:'flex',flexDirection:'row',color:'#blue',fontWeight:'800',alignItems:'center'}}>Change your password frequently and safeguard your digital transactions from cyber criminals </Box>
+              <Box sx={{minheight:'30%',width:'100%',padding:'1em 0em 1em 0em',display:'flex',flexDirection:'row',fontWeight:'550',alignItems:'center'}}>Change your password frequently and safeguard your digital transactions from cyber criminals </Box>
             </Box>
           </Box>
         </Box>
         <Box height={'80vh'} width={'26vw'} marginTop={'0.5em'}>
           <Box sx={{height:'20%',width:'100%',backgroundColor:'#004e96',display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
-            <KeyboardArrowLeftIcon sx={{fontSize:'3.2em',color:'white',fontWeight:'40'}}/>
+            <KeyboardArrowLeftIcon sx={{fontSize:'2.5em',color:'white',fontWeight:'40'}}/>
             <Box sx={{height:'100%',minWidth:'70%',display:'flex',justifyContent:'center',flexDirection:'column',alignItems:'center'}}>
-              <Typography sx={{fontSize:'1.3em',color:'orange'}}>{username}</Typography>
-              <Typography sx={{fontSize:'1.3em',color:'white',fontWeight:'550'}}>99980116907582</Typography>
+              <Typography sx={{fontSize:'1.1em',color:'orange'}}>{username}</Typography>
+              <Typography sx={{fontSize:'1em',color:'white',fontWeight:'550'}}>99980116907582</Typography>
               <Typography sx={{color:'skyblue',fontSize:'small'}}>Savings</Typography>
             </Box>
-            <KeyboardArrowRightIcon sx={{fontSize:'3.2em',color:'white',fontWeight:'40'}}/>
+            <KeyboardArrowRightIcon sx={{fontSize:'2.5em',color:'white',fontWeight:'40'}}/>
           </Box>
           <AccordionGroup
       sx={{

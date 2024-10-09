@@ -65,6 +65,7 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
           justifyContent: "space-between",
           alignItems: "center",
           backgroundColor: "#004e96",
+          overflowY:'hidden'
         }}
       >
         {/* Left Image */}
@@ -186,10 +187,10 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
           )}
         <Box
           sx={{
-            height: "97.5%",
+            overflow:'hidden',
             backgroundColor: "#d3d3d369",
             width: "20%",
-            padding: "0.4em",
+            padding: "1em",
             pl: "1em",
           }}
         >
@@ -210,12 +211,13 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
               flexDirection: "row",
               alignContent: "flex-start",
               flexWrap: "wrap",
-              gap:'18px'
+              gap:'18px',
+              mt:3
             }}
           >
             <Button
               startDecorator={<HomeOutlinedIcon />}
-              size="md"
+              size="sm"
               variant="plain"
               sx={{ color: "black", padding: "0px", mr: "4em" }}
               onClick={()=>{navigate('/Afterlogin',{state:{username}})}}
@@ -224,7 +226,7 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
             </Button>
             <Button
               startDecorator={<StyleOutlinedIcon />}
-              size="md"
+              size="sm"
               variant="plain"
               sx={{ color: "black", padding: "0px", mr: "4em" }}
             >
@@ -233,7 +235,7 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
             <Button
               onMouseEnter={() => setAcc(true)}
               startDecorator={<ContactMailOutlinedIcon />}
-              size="md"
+              size="sm"
               variant="plain"
               sx={{ color: "black", pr: "5em", pl: "0px",  }}
             >
@@ -241,7 +243,7 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
             </Button>
             <Button
               startDecorator={<CurrencyExchangeOutlinedIcon />}
-              size="md"
+              size="sm"
               variant="plain"
               sx={{ color: "black", padding: "0px",  }}
             >
@@ -249,7 +251,7 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
             </Button>
             <Button
               startDecorator={<PersonAddAltOutlinedIcon />}
-              size="md"
+              size="sm"
               variant="plain"
               sx={{ color: "black", padding: "0px",  }}
             >
@@ -257,7 +259,7 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
             </Button>
             <Button
               startDecorator={<BuildOutlinedIcon />}
-              size="md"
+              size="sm"
               variant="plain"
               sx={{ color: "black", padding: "0px",  }}
             >
@@ -265,15 +267,15 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
             </Button>
             <Button
               startDecorator={<RequestQuoteOutlinedIcon />}
-              size="md"
+              size="sm"
               variant="plain"
-              sx={{ color: "black", padding: "0px",  }}
+              sx={{ color: "black", padding: "0px",pr:4  }}
             >
               BILL PAYMENTS     
             </Button>
             <Button
               startDecorator={<ReceiptLongOutlinedIcon />}
-              size="md"
+              size="sm"
               variant="plain"
               sx={{ color: "black", padding: "0px",  }}
             >
@@ -281,7 +283,7 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
             </Button>
             <Button
               startDecorator={<SupportAgentOutlinedIcon />}
-              size="md"
+              size="sm"
               variant="plain"
               sx={{ color: "black", padding: "0px",  }}
             >
@@ -307,9 +309,12 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
         </Box>
         <Box
           sx={{
-            height: "97.5%",
+            height: "100%",
             width: "80%",
+            overflowY:'auto'
           }}
+          flexGrow={1}
+          
         >
           <Outlet/>
          </Box>

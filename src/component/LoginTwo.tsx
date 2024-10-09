@@ -31,15 +31,16 @@ export default function LoginTwo() {
                 display: "flex",
                 alignItems: "center",
                 color: "#004e96",
-                fontWeight: "600",
+                fontWeight: "500",
               }}
+              level='body-xs'
             >
               <StickyNote2Icon sx={{ mr: 0.5, alignContent: "center" }} />
               Accounts: Accounts Info
             </Typography>
 
             {["Operative Accounts", "My Operative accounts"].map((item) => (
-              <Typography key={item} sx={{ color: "#004e96" }}>
+              <Typography key={item} sx={{ color: "#004e96" }} level="body-xs">
                 {item}
               </Typography>
             ))}
@@ -52,14 +53,13 @@ export default function LoginTwo() {
               justifyContent: "space-between",
               alignItems: "center",
               margin: "0.2em 0.2em 0em 0.2em",
-              pl: 2,
-              pr: 2,
+             px:2
             }}
           >
-            <Typography sx={{ color: "whitesmoke" }}>
+            <Typography sx={{ color: "whitesmoke" }} level="body-xs">
               Myoperative accounts
             </Typography>
-            <Typography sx={{ color: "whitesmoke" }}>
+            <Typography sx={{ color: "whitesmoke" }} level="body-xs">
               View Closed Operative Acounts
             </Typography>
           </Box>
@@ -76,15 +76,15 @@ export default function LoginTwo() {
                 flexDirection: "row",
                 justifyContent: "flex-end",
                 gap: "1em",
+                marginTop:2
               }}
             >
               <Button
                 sx={{
-                  border: "2px solid #fca61b",
+                  border: "1.5px solid #fca61b",
                   borderRadius: "1px",
-                  color: "black",
-                  pl: 4,
-                  pr: 4,
+                  color: "#0000009c",
+                  px:4
                 }}
                 variant="outlined"
                 onClick={handleStatement}
@@ -94,29 +94,30 @@ export default function LoginTwo() {
               </Button>
               <Button
                 sx={{
-                  border: "2px solid #fca61b",
+                  border: "1.5px solid #fca61b",
                   borderRadius: "1px",
-                  color: "black",
-                  pl: 4,
-                  pr: 4,
+                  color: "#0000009c",
+                px:4
                 }}
                 variant="outlined"
+                
               >
                 <FormatAlignLeftOutlinedIcon />
                 Mini Statement
               </Button>
               <Button
                 sx={{
-                  border: "2px solid #fca61b",
+                  border: "1.5px solid #fca61b",
                   borderRadius: "1px",
-                  color: "black",
+                  color: "#0000009c",
                   pl: 1,
                   pr: 0,
                 }}
                 variant="outlined"
+                
               >
                 <Box display={"flex"} justifyContent={"space-between"}>
-                  <Typography sx={{ pr: "3em" }}>More Options</Typography>
+                  <Typography sx={{ pr: "3em" }} fontSize={14} textColor={'#0000009c'}>More Options</Typography>
                   <ArrowDropDownOutlinedIcon />
                 </Box>
               </Button>
@@ -132,8 +133,8 @@ export default function LoginTwo() {
                 mt: 2,
               }}
             >
-              <Typography>Operavtive Accounts List</Typography>
-              <Typography>Displaying 1 - 1 of 1 results</Typography>
+              <Typography level="body-xs">Operavtive Accounts List</Typography>
+              <Typography level="body-xs">Displaying 1 - 1 of 1 results</Typography>
             </Box>
             <Sheet sx={{ pl: "1em", pr: "1em" }}>
               <Table borderAxis="bothBetween" variant="outlined">
@@ -191,12 +192,12 @@ export default function LoginTwo() {
                 </thead>
                 <tbody>
                 <tr>
-                <td><Radio value="small" label="99980116907580" size="sm" /></td>
-                <td>{username}</td>
-                <td>SB FEDBOOK SELFIE</td>
-                <td>Visakhapatnam</td>
-                <td>INR</td>
-                <td>22,921.91 cr</td>
+                <td style={{color:'#0000009c',fontSize:12}}><Radio checked color="success" value="small" label="99980116907580"  size="sm" /></td>
+                <td style={{color:'#0000009c',fontSize:12}} >{username}</td>
+                <td style={{color:'#0000009c',fontSize:12}}>SB FEDBOOK SELFIE</td>
+                <td style={{color:'#0000009c',fontSize:12}}>Visakhapatnam</td>
+                <td style={{color:'#0000009c',fontSize:12}}>INR</td>
+                <td style={{color:'#0000009c',fontSize:12}}>22,921.91 cr</td>
                 </tr>
                 </tbody>
               </Table>

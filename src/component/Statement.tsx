@@ -4,7 +4,7 @@ import {
   Breadcrumbs,
   Button,
   Input,
-  Radio,
+  
   Sheet,
   Stack,
   Table,
@@ -13,12 +13,12 @@ import {
 import IconButton from "@mui/joy/IconButton";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import StickyNote2Icon from "@mui/icons-material/StickyNote2";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 export default function Statement() {
   const location = useLocation();
-  const navigate = useNavigate();
+ 
   const username = location.state.username;
   const [statebutton, setState] = React.useState(false);
   interface Data {
@@ -267,8 +267,8 @@ export default function Statement() {
       : Math.min(rows.length, (page + 1) * rowsPerPage);
   };
   // Avoid a layout jump when reaching the last page with empty rows.
-  const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+  // const emptyRows =
+  //   page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
   return (
     <>
       <Stack>
@@ -283,15 +283,16 @@ export default function Statement() {
               display: "flex",
               alignItems: "center",
               color: "#004e96",
-              fontWeight: "600",
+              fontWeight: "500",
             }}
+            level="body-xs"
           >
-            <StickyNote2Icon sx={{ mr: 0.5, alignContent: "center" }} />
+            <StickyNote2Icon sx={{ mr: 0.5 }} />
             Accounts: Accounts Info
           </Typography>
 
           {["Operative Accounts", "My Transactions"].map((item) => (
-            <Typography key={item} sx={{ color: "#004e96" }}>
+            <Typography key={item} sx={{ color: "#004e96" }} level="body-xs">
               {item}
             </Typography>
           ))}
@@ -308,7 +309,7 @@ export default function Statement() {
             pr: 2,
           }}
         >
-          <Typography sx={{ color: "whitesmoke" }}>
+          <Typography sx={{ color: "whitesmoke" }} level="body-sm">
             Statements of Accounts
           </Typography>
         </Box>
@@ -329,7 +330,7 @@ export default function Statement() {
             }}
           >
             <Box sx={{ display: "flex", flexDirection: "column" }}>
-              <Typography fontWeight={700}>Account Number:</Typography>
+              <Typography fontWeight={600} level="body-sm">Account Number:</Typography>
               <Input
                 placeholder={username}
                 endDecorator={<ArrowDropDownIcon />}
@@ -337,7 +338,7 @@ export default function Statement() {
               />
             </Box>
             <Box sx={{ display: "flex", flexDirection: "column" }}>
-              <Typography fontWeight={700}>Transaction Date From:</Typography>
+              <Typography fontWeight={600} level="body-sm">Transaction Date From:</Typography>
               <Input
                 variant="soft"
                 type="date"
@@ -350,7 +351,7 @@ export default function Statement() {
               />
             </Box>
             <Box sx={{ display: "flex", flexDirection: "column" }}>
-              <Typography fontWeight={700}>Transaction Date to:</Typography>
+              <Typography fontWeight={600} level="body-sm">Transaction Date to:</Typography>
               <Input
                 type="date"
                 variant="soft"
@@ -374,28 +375,28 @@ export default function Statement() {
           >
             <Typography
               fontWeight={600}
-              fontSize={15}
+              level="body-sm"
               sx={{ color: "#004e96" }}
             >
               Last One Month Transactions
             </Typography>
             <Typography
               fontWeight={600}
-              fontSize={15}
+              level="body-sm"
               sx={{ color: "#004e96" }}
             >
               Last Two Months Transactions
             </Typography>
             <Typography
               fontWeight={600}
-              fontSize={15}
+              level="body-sm"
               sx={{ color: "#004e96" }}
             >
               Current financial year Transactions
             </Typography>
             <Typography
               fontWeight={600}
-              fontSize={15}
+              level="body-sm"
               sx={{ color: "#004e96" }}
             >
               Previous financial year Transactions
@@ -412,7 +413,7 @@ export default function Statement() {
           >
             <Typography
               fontWeight={600}
-              fontSize={15}
+            level="body-sm"
               sx={{ color: "#fca61b" }}
             >
               Advanced Search Criteria
@@ -437,9 +438,9 @@ export default function Statement() {
               }}
             >
               <Typography
-                fontSize={15}
+                level="body-sm"
                 fontWeight={600}
-                sx={{ p: "1em", alignSelf: "center", color: "blue" }}
+                sx={{ p: ".5em", alignSelf: "center", color: "blue" }}
               >
                 You can select a maximum of 1 year period
               </Typography>
@@ -465,7 +466,10 @@ export default function Statement() {
               onClick={() => {
                 setState(false);
               }}
+              size="sm"
             >
+
+
               {" "}
               Back
             </Button>
@@ -501,8 +505,8 @@ export default function Statement() {
           mt: 2,
         }}
       >
-        <Typography>Transaction List - - {username}</Typography>
-        <Typography sx={{ textAlign: "center", minWidth: 80 }}>
+        <Typography level="body-sm">Transaction List - - {username}</Typography>
+        <Typography sx={{ textAlign: "center", minWidth: 80 }} level="body-sm">
               {labelDisplayedRows({
                 from: rows.length === 0 ? 0 : page * rowsPerPage + 1,
                 to: getLabelDisplayedRowsTo(),
@@ -595,14 +599,14 @@ export default function Statement() {
             disabled={page === 0}
             onClick={() => handleChangePage(page - 1)}
             sx={{
-              p: "0.4em",
+              p: "0.2em",
               borderTopRightRadius: "0",
               borderBottomRightRadius: "0",
             }}
           >
             <KeyboardArrowLeftIcon sx={{ color: "#004e96" }} />
             <Typography
-              sx={{ color: "#004e96", fontWeight: "800", fontSize: "small" }}
+              sx={{ color: "#004e96", fontWeight: "700" }} level="body-sm"
             >
               Prev
             </Typography>
@@ -611,10 +615,10 @@ export default function Statement() {
             sx={{
               borderTop: "1px solid #d3d3d3",
               borderBottom: "1px  solid #d3d3d3",
-              p: "0.35em",
+              p: "0.25em",
             }}
           >
-            <Typography sx={{ textAlign: "center", minWidth: 80 }}>
+            <Typography sx={{ textAlign: "center", minWidth: 80 }} level="body-sm">
               Page {page + 1} of {Math.ceil(rows.length/10)}
             </Typography>
           </Box>
@@ -629,13 +633,13 @@ export default function Statement() {
             }
             onClick={() => handleChangePage(page + 1)}
             sx={{
-              p: "0.4em",
+              p: "0.2em",
               borderTopLeftRadius: "0",
               borderBottomLeftRadius: "0",
             }}
           >
             <Typography
-              sx={{ color: "#004e96", fontWeight: "800", fontSize: "small" }}
+              sx={{ color: "#004e96", fontWeight: "700" }} level="body-sm"
             >
               Next
             </Typography>
@@ -657,22 +661,26 @@ export default function Statement() {
               gap: 2,
             }}
           >
+    <a href="../pdf/sahil.pdf" download="Statement of Sahil" style={{ textDecoration: 'none' }}>
+    <Button
+      sx={{
+        pl: "5em",
+        pr: "5em",
+        borderRadius: "3px",
+        backgroundColor: "#059600b0",
+        fontSize: 12,
+      }}
+    >
+      Download as PDF
+    </Button>
+    </a>
             <Button
               sx={{
                 pl: "5em",
                 pr: "5em",
                 borderRadius: "3px",
                 backgroundColor: "#059600b0",
-              }}
-            >
-              Download as PDF
-            </Button>
-            <Button
-              sx={{
-                pl: "5em",
-                pr: "5em",
-                borderRadius: "3px",
-                backgroundColor: "#059600b0",
+                fontSize:12
               }}
             >
               Download as Excel

@@ -11,6 +11,7 @@ export default function MainLogin() {
   // State variable to store the username
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
+  
   return (
     <>
       <Sheet
@@ -28,7 +29,7 @@ export default function MainLogin() {
       >
         <Box
           sx={{
-            height: "18em",
+            height: "21em",
             width: "18em",
             backgroundColor: "white",
             m: "2em",
@@ -67,6 +68,21 @@ export default function MainLogin() {
               endDecorator={<KeyboardAltOutlinedIcon />}
               size="sm"
               type="password"
+              sx={{
+                width: "90%",
+                alignSelf: "center",
+                borderRadius: "2px",
+                ml: "1em",
+                mt: "1em",
+              }}
+            />
+             <Input
+              placeholder="   Mobile number(including country code)"
+              size="sm"
+              type="text"
+             slotProps={{
+                    input: { maxLength: 12 }, 
+            }}
               sx={{
                 width: "90%",
                 alignSelf: "center",
