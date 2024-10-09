@@ -39,11 +39,14 @@ export default function LoginTwo() {
               Accounts: Accounts Info
             </Typography>
 
-            {["Operative Accounts", "My Operative accounts"].map((item) => (
-              <Typography key={item} sx={{ color: "#004e96" }} level="body-xs">
-                {item}
+            
+              <Typography  sx={{ color: "#004e96" }} level="body-xs">
+                Operative Accounts
               </Typography>
-            ))}
+               <Typography  sx={{ color: "#6d6767e3" }} level="body-xs">
+                My Operative accounts
+              </Typography>
+          
           </Breadcrumbs>
           <Box
             sx={{
@@ -84,7 +87,8 @@ export default function LoginTwo() {
                   border: "1.5px solid #fca61b",
                   borderRadius: "1px",
                   color: "#0000009c",
-                  px:4
+                  px:4,
+                  fontSize:12
                 }}
                 variant="outlined"
                 onClick={handleStatement}
@@ -97,7 +101,7 @@ export default function LoginTwo() {
                   border: "1.5px solid #fca61b",
                   borderRadius: "1px",
                   color: "#0000009c",
-                px:4
+                px:4, fontSize:12
                 }}
                 variant="outlined"
                 
@@ -112,12 +116,13 @@ export default function LoginTwo() {
                   color: "#0000009c",
                   pl: 1,
                   pr: 0,
+                   fontSize:12
                 }}
                 variant="outlined"
                 
               >
                 <Box display={"flex"} justifyContent={"space-between"}>
-                  <Typography sx={{ pr: "3em" }} fontSize={14} textColor={'#0000009c'}>More Options</Typography>
+                  <Typography sx={{ pr: "3em" }} fontSize={12} textColor={'#0000009c'}>More Options</Typography>
                   <ArrowDropDownOutlinedIcon />
                 </Box>
               </Button>
@@ -144,6 +149,7 @@ export default function LoginTwo() {
                       style={{
                         backgroundColor: "rgb(73 186 218 / 59%)",
                         textAlign: "center",
+                        fontSize:12
                       }}
                     >
                       Account Number
@@ -152,6 +158,7 @@ export default function LoginTwo() {
                       style={{
                         backgroundColor: "rgb(73 186 218 / 59%)",
                         textAlign: "center",
+                        fontSize:12
                       }}
                     >
                       Nick Name
@@ -160,6 +167,7 @@ export default function LoginTwo() {
                       style={{
                         backgroundColor: "rgb(73 186 218 / 59%)",
                         textAlign: "center",
+                        fontSize:12,
                       }}
                     >
                       Account Type
@@ -168,6 +176,7 @@ export default function LoginTwo() {
                       style={{
                         backgroundColor: "rgb(73 186 218 / 59%)",
                         textAlign: "center",
+                        fontSize:12
                       }}
                     >
                       Branch
@@ -176,6 +185,7 @@ export default function LoginTwo() {
                       style={{
                         backgroundColor: "rgb(73 186 218 / 59%)",
                         textAlign: "center",
+                        fontSize:12
                       }}
                     >
                       Currency
@@ -184,6 +194,7 @@ export default function LoginTwo() {
                       style={{
                         backgroundColor: "rgb(73 186 218 / 59%)",
                         textAlign: "center",
+                        fontSize:12
                       }}
                     >
                       Balance
