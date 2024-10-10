@@ -65,7 +65,10 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
           justifyContent: "space-between",
           alignItems: "center",
           backgroundColor: "#004e96",
-          overflowY:'hidden'
+          overflowY:'hidden',
+          position:'sticky',
+          top:'0px',
+          zIndex:1
         }}
       >
         {/* Left Image */}
@@ -319,6 +322,22 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
           <Outlet/>
          </Box>
       </Sheet>
+      <Sheet
+        sx={{
+          width: "100%",
+          height: "5vh",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          backgroundColor:'whitesmoke',
+          overflowY:'hidden',
+          position:'Fixed',
+          bottom:'0px',
+          zIndex:1
+        }}
+        >
+
+        </Sheet>
     </>
   );
 }
