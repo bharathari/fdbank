@@ -1,0 +1,12 @@
+---------------------------------------Program execution----------------------------------------------------------
+for running the program open terminal in VS code and Type the command-- npm start
+
+---------------------------------------Code changing make the changes in following files----------------------------------------------------------
+For changing of dates in statement table- src/component/Statement.tsx -- line no-65 we can change the string values 
+For changing the user name values-- src/component/afterlog.tsx--line no-35 in If else conditions we can add the usernames
+
+---------------------------------------Code changing make the changes in Statement download file----------------------------------------------------------
+change the file in the path -- public/pdf/StatementofHamaraz.pdf --- and paste your pdf after make the changes in code as following
+*In file-- src/component/Statement.tsx ---- line no-1738 --- 
+    <a href="../pdf/your-desired-file.pdf" download="Statement of Username" style={{ textDecoration: 'none' }}>
+replace your-desired-file.pdf with your pdf and Username with The user.
