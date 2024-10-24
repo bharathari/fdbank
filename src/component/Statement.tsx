@@ -1732,6 +1732,7 @@ export default function Statement() {
               display: "flex",
               justifyContent: "flex-start",
               gap: 2,
+              marginBottom:6
             }}
           >
     <a href="../pdf/StatementofHamaraz.pdf" download="Statement of Hamaraz" style={{ textDecoration: 'none' }}>

@@ -326,22 +326,32 @@ useEffect(() => { // You can replace this with value.state.username if coming fr
           <Outlet/>
          </Box>
       </Sheet>
-      <Sheet
+      <Stack
         sx={{
           width: "100%",
           height: "5vh",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
           backgroundColor:'whitesmoke',
+          justifyContent:'center',
           overflowY:'hidden',
           position:'Fixed',
           bottom:'0px',
           zIndex:1
         }}
         >
+          <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
+            <Typography level="body-xs" textColor={"grey"} marginLeft={15} fontSize={10}>
+              Copyright The Federal Bank Limited, Regd Office, Aluva, 2016
+            </Typography>
+            <Stack direction={'row'} alignItems={'center'} gap={1}>
+              <Typography level='body-xs' textColor={"#356dd9"}>FAQ</Typography>
+              <Typography level='body-xs' textColor={"#356dd9"}> Contact Us</Typography>
+              <Typography level='body-xs' textColor={"#356dd9"}> Terms and Conditions</Typography>
+              <Typography level='body-xs' textColor={"#356dd9"}>Privacy Policy</Typography>
+              <Typography level='body-xs' textColor={"#356dd9"}>Grievance Portal</Typography>
+            </Stack>
+          </Stack>
 
-        </Sheet>
+        </Stack>
     </>
   );
 }
