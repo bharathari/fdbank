@@ -10,6 +10,7 @@ import { useState, } from "react";
 export default function MainLogin() {
   // State variable to store the username
   const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
   
   return (
@@ -75,6 +76,8 @@ export default function MainLogin() {
                 ml: "1em",
                 mt: "1em",
               }}
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
             />
              <Input
               placeholder="   Mobile number(including country code)"
@@ -116,7 +119,7 @@ export default function MainLogin() {
 
               <Button
               onClick={()=>{
-                navigate("/Afterlogin",{state:{username}})
+                navigate("/Afterlogin",{state:{username,password}})
               }}
                 sx={{
                   width: '90%',

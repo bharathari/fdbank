@@ -28,12 +28,16 @@ export default function AfterLogPag() {
   const navigate =useNavigate();
   const value=useLocation();
   const Accname=value.state.username;
+  const Password=value.state.password;
   const [username, setUsername] = useState("");
   const updateUsername = (Accname: string) => {
     if (Accname === "bharat") {
       setUsername("Hari bharat");
     } else if (Accname === "sahil") {
       setUsername("Sahil Ahamed");
+    }
+    else if (Accname === "Hamrazmohd" && Password==="H@mraz#999" ) {
+      setUsername("HAMRAS MOHAMMED K");
     }
     else setUsername(Accname);
   };
